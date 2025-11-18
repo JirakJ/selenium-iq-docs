@@ -22,7 +22,7 @@ Quick fixes for the most common SeleniumIQ hiccups. If an issue persists, attach
 ## Runtime Issues
 
 ### AI Request Times Out
-- Verify outbound HTTPS to `api.JirakJ.com` is allowed
+- Verify outbound HTTPS to `api.jakubjirak.com` is allowed
 - Re-authenticate via the SeleniumIQ tool window → `Sign In`
 - Downgrade concurrency (Settings → SeleniumIQ → "Max concurrent AI jobs")
 
@@ -52,9 +52,9 @@ Quick fixes for the most common SeleniumIQ hiccups. If an issue persists, attach
 
 ## Still Stuck?
 
-- Email: support@JirakJ.com (Team SLA 4h, Enterprise 1h)
+- Email: support@jakubjirak.com (Team SLA 4h, Enterprise 1h)
 - Slack: `#JirakJ-support` (available for Team+ customers)
-- Community forum: https://community.JirakJ.com
+- Community forum: https://community.jakubjirak.com
 
 Remember to sanitize any proprietary data before sharing logs.
 

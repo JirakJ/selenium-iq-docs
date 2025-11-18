@@ -34,7 +34,7 @@ Downgrades take effect at the end of the current billing cycle. Usage that excee
 
 ## Procurement Support
 
-- Generate quotes or invoices via `billing@JirakJ.com`
+- Generate quotes or invoices via `billing@jakubjirak.com`
 - Enterprise security questionnaires handled within 3 business days
 - Optional pilot program (30 days) for teams evaluating Enterprise features
 

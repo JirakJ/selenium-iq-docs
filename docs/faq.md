@@ -27,7 +27,7 @@ Through JetBrains Marketplace. Enable automatic updates under `Settings → Plug
 Not yet. The roadmap focuses on Selenium/WebDriver tooling inside IntelliJ, with API parity available for IDE-based test authoring.
 
 ## Where should I report security issues?
-Email `security@JirakJ.com` with reproduction details. Expect a response within 48 hours.
+Email `security@jakubjirak.com` with reproduction details. Expect a response within 48 hours.
 
 Still have questions? File a [Docs Update]({{ '/issue-tracker/' | relative_url }}) issue and tag it with `question`.
 

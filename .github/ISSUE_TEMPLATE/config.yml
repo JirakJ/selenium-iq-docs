@@ -1,9 +1,9 @@
 blank_issues_enabled: false
 contact_links:
   - name: Plugin Issues
-    url: https://github.com/JirakJ/selenium-iq-plugin/issues
+    url: https://github.com/JirakJ/selenium-iq-docs/issues
     about: Report bugs or feature requests related to the IntelliJ plugin runtime
   - name: Security Reports
-    url: mailto:security@JirakJ.com
+    url: mailto:security@jakubjirak.com
     about: Use this channel for responsible disclosure submissions
 
