@@ -1,0 +1,45 @@
+name: "Defect Report"
+description: "Report a regression or incorrect behavior in the plugin or docs"
+title: "[DEFECT] Short summary"
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve SeleniumIQ. Please provide as much detail as possible so we can reproduce the issue.
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened compared to what you expected?
+      placeholder: "Self-heal never triggers when running from CLI"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide a numbered list of steps and mention any required sample project
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: IDE version, OS, plugin version, license tier
+      placeholder: "IntelliJ 2024.2 • macOS 14.1 • plugin v1.1.2 • Team tier"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs & screenshots
+      description: Attach IDE logs, stack traces, or screenshots that show the problem
+  - type: input
+    id: related
+    attributes:
+      label: Related issues/PRs
+      description: Link any existing issues or pull requests
