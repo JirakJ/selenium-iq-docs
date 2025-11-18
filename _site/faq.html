@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ | SeleniumIQ Docs</title>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>FAQ | selenium-iq-docs</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="FAQ" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for jetbrains IDE plugin" />
+<meta property="og:description" content="Documentation for jetbrains IDE plugin" />
+<link rel="canonical" href="http://localhost:4000/faq.html" />
+<meta property="og:url" content="http://localhost:4000/faq.html" />
+<meta property="og:site_name" content="selenium-iq-docs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="FAQ" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Documentation for jetbrains IDE plugin","headline":"FAQ","url":"http://localhost:4000/faq.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" integrity="sha512-8Qh5R+xVQxeqmoeZaZX6mE6xPD58Ll35H5TADaBrZEcD3xKhsR4HIX66vepQP9enZ5bY3bT5iAG2wE8xmPKX5Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; line-height: 1.6; }
+    header nav a { margin-right: 0.75rem; }
+    header nav a.active { font-weight: 600; }
+    pre { background: #f6f8fa; padding: 1rem; overflow-x: auto; }
+    .note { border-left: 4px solid #33c3f0; padding: 0.5rem 1rem; background: #f0faff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/">SeleniumIQ Docs</a></h1>
+    <p>AI-powered Selenium testing companion for IntelliJ IDEA.</p>
+    <nav>
+      
+      
+      <a href="https://github.com/JirakJ/selenium-iq-plugin" target="_blank">Plugin Repo ↗</a>
+    </nav>
+    <hr />
+  </header>
+  <main>
+    <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+
+<h2 id="does-seleniumiq-send-my-test-code-to-the-cloud">Does SeleniumIQ send my test code to the cloud?</h2>
+<p>No. Only DOM snippets and metadata required for locator generation leave your machine. Code is processed locally inside IntelliJ.</p>
+
+<h2 id="which-languages-are-supported">Which languages are supported?</h2>
+<p>Java, Kotlin, and Groovy are fully supported. JavaScript/TypeScript bindings are on the roadmap.</p>
+
+<h2 id="how-do-i-reset-my-api-key">How do I reset my API key?</h2>
+<p>Open the SeleniumIQ tool window → <code class="language-plaintext highlighter-rouge">Account</code> → <code class="language-plaintext highlighter-rouge">Regenerate API Key</code>. Update CI secrets immediately to avoid failed pipelines.</p>
+
+<h2 id="can-i-run-seleniumiq-without-internet-access">Can I run SeleniumIQ without internet access?</h2>
+<p>Core IDE tooling works offline, but AI locator generation and self-healing require connectivity. Enterprise customers can request a private SaaS region for data residency.</p>
+
+<h2 id="what-telemetry-is-collected">What telemetry is collected?</h2>
+<p>Anonymous usage stats (feature toggles, error codes). Logs, DOM snapshots, and code never leave your machine unless you explicitly export them for support.</p>
+
+<h2 id="how-are-updates-delivered">How are updates delivered?</h2>
+<p>Through JetBrains Marketplace. Enable automatic updates under <code class="language-plaintext highlighter-rouge">Settings → Plugins → ⚙ → Manage Plugin Repositories</code>.</p>
+
+<h2 id="does-seleniumiq-support-playwright-or-cypress">Does SeleniumIQ support Playwright or Cypress?</h2>
+<p>Not yet. The roadmap focuses on Selenium/WebDriver tooling inside IntelliJ, with API parity available for IDE-based test authoring.</p>
+
+<h2 id="where-should-i-report-security-issues">Where should I report security issues?</h2>
+<p>Email <code class="language-plaintext highlighter-rouge">security@JirakJ.com</code> with reproduction details. Expect a response within 48 hours.</p>
+
+<p>Still have questions? File a <a href="/issue-tracker/">Docs Update</a> issue and tag it with <code class="language-plaintext highlighter-rouge">question</code>.</p>
+
+
+  </main>
+  <footer>
+    <hr />
+    <p>Built by the SeleniumIQ team · <a href="https://github.com/JirakJ/selenium-iq-docs">Edit this page on GitHub</a></p>
+  </footer>
+</body>
+</html>

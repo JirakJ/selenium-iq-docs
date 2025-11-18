@@ -1,9 +1,9 @@
 title: SeleniumIQ Docs
-email: docs@jakubjirak.com
+email: docs@JirakJ.com
 description: AI-powered Selenium testing documentation hub
 baseurl: ""
-url: "https://jakubjirak.github.io/selenium-iq-docs"
-repository: jakubjirak/selenium-iq-docs
+url: "https://JirakJ.github.io/selenium-iq-docs"
+repository: JirakJ/selenium-iq-docs
 theme: minima
 plugins:
   - jekyll-feed
@@ -50,5 +50,5 @@ defaults:
           url: /issue-tracker/
 
 social_links:
-  - { platform: github, user_url: "https://github.com/jakubjirak/selenium-iq-plugin" }
+  - { platform: github, user_url: "https://github.com/JirakJ/selenium-iq-plugin" }
   - { platform: twitter, user_url: "https://twitter.com/SeleniumIQ" }

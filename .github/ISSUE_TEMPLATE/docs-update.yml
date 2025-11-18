@@ -1,0 +1,38 @@
+name: "Docs Update"
+description: "Report missing, outdated, or unclear documentation"
+title: "[DOCS] Short summary"
+labels:
+  - docs
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page URL or section
+      description: Provide a link (e.g., /getting-started/) or describe the section
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current content
+      description: Paste the sentence/paragraph that needs an update
+      placeholder: "Step 3 references an outdated menu"
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected update
+      description: Describe the fix or paste suggested wording
+      placeholder: "Replace with the new UI text..."
+      validations:
+        required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason / context
+      description: Why is this change necessary? (new feature, bugfix, typo)
+  - type: input
+    id: references
+    attributes:
+      label: Related issues/PRs
+      description: Link any plugin PRs or issues that require aligned docs
+

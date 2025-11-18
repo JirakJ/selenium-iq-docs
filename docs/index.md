@@ -17,9 +17,9 @@ Welcome to the official docs for the SeleniumIQ IntelliJ plugin. Use this site t
 
 ## Key Resources
 
-- Plugin source: [jakubjirak/selenium-iq-plugin](https://github.com/jakubjirak/selenium-iq-plugin)
+- Plugin source: [JirakJ/selenium-iq-plugin](https://github.com/JirakJ/selenium-iq-plugin)
 - JetBrains Marketplace: [SeleniumIQ Listing](https://plugins.jetbrains.com/plugin/PSELENIUMIQAIPO)
-- Documentation issues: [File an issue](https://github.com/jakubjirak/selenium-iq-docs/issues/new/choose)
+- Documentation issues: [File an issue](https://github.com/JirakJ/selenium-iq-docs/issues/new/choose)
 
 ## Latest Release Highlights (v1.1.2)
 

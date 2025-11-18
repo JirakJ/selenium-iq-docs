@@ -53,4 +53,4 @@ Documentation-specific requests live in this repository using the pre-filled iss
 - `Feature Request` for new content or product enhancements that impact the docs.
 - `Docs Update` for typos, reorganizations, or missing sections.
 
-Development work for the IntelliJ plugin remains in [`selenium-iq-plugin`](https://github.com/jakubjirak/selenium-iq-plugin), but cross-links between repos keep releases aligned.
+Development work for the IntelliJ plugin remains in [`selenium-iq-plugin`](https://github.com/JirakJ/selenium-iq-plugin), but cross-links between repos keep releases aligned.

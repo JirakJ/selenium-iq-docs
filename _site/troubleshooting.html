@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshooting | SeleniumIQ Docs</title>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Troubleshooting | selenium-iq-docs</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Troubleshooting" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for jetbrains IDE plugin" />
+<meta property="og:description" content="Documentation for jetbrains IDE plugin" />
+<link rel="canonical" href="http://localhost:4000/troubleshooting.html" />
+<meta property="og:url" content="http://localhost:4000/troubleshooting.html" />
+<meta property="og:site_name" content="selenium-iq-docs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Troubleshooting" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Documentation for jetbrains IDE plugin","headline":"Troubleshooting","url":"http://localhost:4000/troubleshooting.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" integrity="sha512-8Qh5R+xVQxeqmoeZaZX6mE6xPD58Ll35H5TADaBrZEcD3xKhsR4HIX66vepQP9enZ5bY3bT5iAG2wE8xmPKX5Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; line-height: 1.6; }
+    header nav a { margin-right: 0.75rem; }
+    header nav a.active { font-weight: 600; }
+    pre { background: #f6f8fa; padding: 1rem; overflow-x: auto; }
+    .note { border-left: 4px solid #33c3f0; padding: 0.5rem 1rem; background: #f0faff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/">SeleniumIQ Docs</a></h1>
+    <p>AI-powered Selenium testing companion for IntelliJ IDEA.</p>
+    <nav>
+      
+      
+      <a href="https://github.com/JirakJ/selenium-iq-plugin" target="_blank">Plugin Repo ↗</a>
+    </nav>
+    <hr />
+  </header>
+  <main>
+    <h1 id="troubleshooting">Troubleshooting</h1>
+
+<p>Quick fixes for the most common SeleniumIQ hiccups. If an issue persists, attach logs and open a <a href="https://github.com/JirakJ/selenium-iq-docs/issues/new/choose">Bug Report</a>.</p>
+
+<h2 id="installation-problems">Installation Problems</h2>
+
+<h3 id="plugin-not-visible-in-marketplace">Plugin Not Visible in Marketplace</h3>
+<ul>
+  <li>Ensure your IDE version is 2021.3+ (Help → About)</li>
+  <li>Check “Early Access” channel toggle inside the Marketplace dialog</li>
+  <li>For air-gapped networks, install from disk using the latest <code class="language-plaintext highlighter-rouge">.zip</code></li>
+</ul>
+
+<h3 id="verification-failed-during-install">Verification Failed During Install</h3>
+<ul>
+  <li>Clear IntelliJ caches: <code class="language-plaintext highlighter-rouge">File → Invalidate Caches / Restart</code></li>
+  <li>Remove remnants under <code class="language-plaintext highlighter-rouge">~/Library/Application Support/JetBrains/&lt;IDE&gt;/plugins/selenium-iq</code></li>
+  <li>Retry installation</li>
+</ul>
+
+<h2 id="runtime-issues">Runtime Issues</h2>
+
+<h3 id="ai-request-times-out">AI Request Times Out</h3>
+<ul>
+  <li>Verify outbound HTTPS to <code class="language-plaintext highlighter-rouge">api.JirakJ.com</code> is allowed</li>
+  <li>Re-authenticate via the SeleniumIQ tool window → <code class="language-plaintext highlighter-rouge">Sign In</code></li>
+  <li>Downgrade concurrency (Settings → SeleniumIQ → “Max concurrent AI jobs”)</li>
+</ul>
+
+<h3 id="tool-window-missing">Tool Window Missing</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">View → Tool Windows → SeleniumIQ</code></li>
+  <li>Reset window layout via <code class="language-plaintext highlighter-rouge">Window → Restore Default Layout</code></li>
+  <li>Disable conflicting plugins that override tool windows</li>
+</ul>
+
+<h3 id="self-heal-does-not-trigger">Self-Heal Does Not Trigger</h3>
+<ul>
+  <li>Confirm tests run with the <code class="language-plaintext highlighter-rouge">SeleniumIQ Self-Heal</code> run configuration</li>
+  <li>Ensure premium license is active (Team tier or above for CI heals)</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">--enable-self-heal</code> flag when running via CLI or CI</li>
+</ul>
+
+<h2 id="cicd-failures">CI/CD Failures</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Symptom</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GitHub Actions job stuck on “Waiting for SeleniumIQ”</td>
+      <td>Ensure <code class="language-plaintext highlighter-rouge">SELENIUMIQ_API_KEY</code> secret exists and is referenced in the workflow</td>
+    </tr>
+    <tr>
+      <td>Headless Chromium crashes</td>
+      <td>Update to SeleniumIQ v1.1.2 and set <code class="language-plaintext highlighter-rouge">--disable-features=VizDisplayCompositor</code></td>
+    </tr>
+    <tr>
+      <td>Missing DOM snapshots in CI</td>
+      <td>Enable artifact upload (<code class="language-plaintext highlighter-rouge">upload-artifact</code> step) or configure the SeleniumIQ agent to emit snapshots to <code class="language-plaintext highlighter-rouge">/tmp/JirakJ</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="collecting-diagnostics">Collecting Diagnostics</h2>
+
+<ol>
+  <li>Open the SeleniumIQ tool window → <code class="language-plaintext highlighter-rouge">⋮ → Export Diagnostics</code></li>
+  <li>Attach the generated <code class="language-plaintext highlighter-rouge">.zip</code> to the GitHub issue</li>
+  <li>Include IDE logs via <code class="language-plaintext highlighter-rouge">Help → Collect Logs and Diagnostic Data</code></li>
+</ol>
+
+<h2 id="still-stuck">Still Stuck?</h2>
+
+<ul>
+  <li>Email: support@JirakJ.com (Team SLA 4h, Enterprise 1h)</li>
+  <li>Slack: <code class="language-plaintext highlighter-rouge">#JirakJ-support</code> (available for Team+ customers)</li>
+  <li>Community forum: https://community.JirakJ.com</li>
+</ul>
+
+<p>Remember to sanitize any proprietary data before sharing logs.</p>
+
+
+  </main>
+  <footer>
+    <hr />
+    <p>Built by the SeleniumIQ team · <a href="https://github.com/JirakJ/selenium-iq-docs">Edit this page on GitHub</a></p>
+  </footer>
+</body>
+</html>

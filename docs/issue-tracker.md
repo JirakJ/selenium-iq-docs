@@ -46,7 +46,7 @@ We standardize triage via `.github/ISSUE_TEMPLATE`.
 
 ## Cross-Repo Best Practices
 
-- Reference plugin issues from docs using `jakubjirak/selenium-iq-plugin#123`
+- Reference plugin issues from docs using `JirakJ/selenium-iq-plugin#123`
 - Mention docs PRs in plugin release notes when they affect user-facing behavior
 - Keep changelog entries mirrored across both repos each release
 
@@ -56,4 +56,4 @@ We standardize triage via `.github/ISSUE_TEMPLATE`.
 - Label sync bot mirrors labels between repos for shared issues
 - Deploy workflow comments on linked plugin issues after docs publish
 
-Need assistance? Contact `docs@jakubjirak.com` or drop by the `#jakubjirak-support` Slack channel (Team plan and above).
+Need assistance? Contact `docs@JirakJ.com` or drop by the `#JirakJ-support` Slack channel (Team plan and above).

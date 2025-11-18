@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contributing | SeleniumIQ Docs</title>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Contributing | selenium-iq-docs</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Contributing" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for jetbrains IDE plugin" />
+<meta property="og:description" content="Documentation for jetbrains IDE plugin" />
+<link rel="canonical" href="http://localhost:4000/contributing.html" />
+<meta property="og:url" content="http://localhost:4000/contributing.html" />
+<meta property="og:site_name" content="selenium-iq-docs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Contributing" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Documentation for jetbrains IDE plugin","headline":"Contributing","url":"http://localhost:4000/contributing.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" integrity="sha512-8Qh5R+xVQxeqmoeZaZX6mE6xPD58Ll35H5TADaBrZEcD3xKhsR4HIX66vepQP9enZ5bY3bT5iAG2wE8xmPKX5Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; line-height: 1.6; }
+    header nav a { margin-right: 0.75rem; }
+    header nav a.active { font-weight: 600; }
+    pre { background: #f6f8fa; padding: 1rem; overflow-x: auto; }
+    .note { border-left: 4px solid #33c3f0; padding: 0.5rem 1rem; background: #f0faff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/">SeleniumIQ Docs</a></h1>
+    <p>AI-powered Selenium testing companion for IntelliJ IDEA.</p>
+    <nav>
+      
+      
+      <a href="https://github.com/JirakJ/selenium-iq-plugin" target="_blank">Plugin Repo ↗</a>
+    </nav>
+    <hr />
+  </header>
+  <main>
+    <h1 id="contributing">Contributing</h1>
+
+<p>Help keep the SeleniumIQ docs accurate and approachable. Follow this workflow for changes:</p>
+
+<h2 id="1-open-an-issue">1. Open an Issue</h2>
+<ul>
+  <li>Choose the issue template that fits (bug, feature, docs update)</li>
+  <li>Include reproduction steps, screenshots, or context links</li>
+  <li>Tag <code class="language-plaintext highlighter-rouge">needs-info</code> if triage should request more details</li>
+</ul>
+
+<h2 id="2-branch-strategy">2. Branch Strategy</h2>
+<ul>
+  <li>Fork the repo if you lack write access</li>
+  <li>Create a feature branch: <code class="language-plaintext highlighter-rouge">docs/&lt;short-topic&gt;</code></li>
+  <li>Keep pull requests focused—one area per PR</li>
+</ul>
+
+<h2 id="3-writing-guidelines">3. Writing Guidelines</h2>
+<ul>
+  <li>Use concise, action-oriented English</li>
+  <li>Prefer ordered lists for step-by-step instructions</li>
+  <li>Include code blocks with language hints (<code class="language-plaintext highlighter-rouge"> </code><code class="language-plaintext highlighter-rouge">bash `, `</code><code class="language-plaintext highlighter-rouge">kotlin </code>)</li>
+  <li>Update cross-links when adding new pages (e.g., nav table on <code class="language-plaintext highlighter-rouge">index.md</code>)</li>
+</ul>
+
+<h2 id="4-local-preview">4. Local Preview</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install
+</span>bundle <span class="nb">exec </span>jekyll serve <span class="nt">--source</span> docs <span class="nt">--destination</span> _site <span class="nt">--livereload</span>
+</code></pre></div></div>
+
+<p>Confirm the page renders correctly before opening a PR.</p>
+
+<h2 id="5-pull-request-checklist">5. Pull Request Checklist</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Links tested locally</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Screenshots attached if the layout changes</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Issue reference included (e.g., <code class="language-plaintext highlighter-rouge">Closes #42</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Release notes updated when user-facing behavior changes</li>
+</ul>
+
+<h2 id="6-after-merge">6. After Merge</h2>
+<ul>
+  <li>Ensure GitHub Pages deployment succeeds (see workflow logs)</li>
+  <li>Cross-link any relevant plugin PRs or releases so end-to-end documentation stays current</li>
+</ul>
+
+<p>Thanks for keeping SeleniumIQ documentation healthy!</p>
+
+
+  </main>
+  <footer>
+    <hr />
+    <p>Built by the SeleniumIQ team · <a href="https://github.com/JirakJ/selenium-iq-docs">Edit this page on GitHub</a></p>
+  </footer>
+</body>
+</html>

@@ -22,7 +22,7 @@ This guide walks you from installation to your first AI-generated locator inside
 
 ### Offline Installation
 
-If your machine has limited connectivity, download the latest `.zip` from the [releases page](https://github.com/jakubjirak/selenium-iq-plugin/releases) and install via `Settings → Plugins → ⚙ → Install Plugin from Disk`.
+If your machine has limited connectivity, download the latest `.zip` from the [releases page](https://github.com/JirakJ/selenium-iq-plugin/releases) and install via `Settings → Plugins → ⚙ → Install Plugin from Disk`.
 
 ## 2. Prepare Your Project
 
