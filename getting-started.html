@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started | SeleniumIQ Docs</title>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Getting Started | selenium-iq-docs</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Getting Started" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for jetbrains IDE plugin" />
+<meta property="og:description" content="Documentation for jetbrains IDE plugin" />
+<meta property="og:site_name" content="selenium-iq-docs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Getting Started" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Documentation for jetbrains IDE plugin","headline":"Getting Started","url":"/getting-started.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" integrity="sha512-8Qh5R+xVQxeqmoeZaZX6mE6xPD58Ll35H5TADaBrZEcD3xKhsR4HIX66vepQP9enZ5bY3bT5iAG2wE8xmPKX5Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; line-height: 1.6; }
+    header nav a { margin-right: 0.75rem; }
+    header nav a.active { font-weight: 600; }
+    pre { background: #f6f8fa; padding: 1rem; overflow-x: auto; }
+    .note { border-left: 4px solid #33c3f0; padding: 0.5rem 1rem; background: #f0faff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/">SeleniumIQ Docs</a></h1>
+    <p>AI-powered Selenium testing companion for IntelliJ IDEA.</p>
+    <nav>
+      
+      
+      <a href="https://github.com/JirakJ/selenium-iq-plugin" target="_blank">Plugin Repo ↗</a>
+    </nav>
+    <hr />
+  </header>
+  <main>
+    <h1 id="getting-started-with-seleniumiq">Getting Started with SeleniumIQ</h1>
+
+<p>This guide walks you from installation to your first AI-generated locator inside IntelliJ IDEA.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li>IntelliJ IDEA 2021.3 or newer (Community or Ultimate)</li>
+  <li>Java 11+ configured in the IDE</li>
+  <li>Existing Selenium project (Maven/Gradle) or a fresh template</li>
+  <li>Internet access for AI-powered capabilities</li>
+</ul>
+
+<h2 id="1-install-the-plugin">1. Install the Plugin</h2>
+
+<ol>
+  <li>Open IntelliJ IDEA → <code class="language-plaintext highlighter-rouge">Settings</code> → <code class="language-plaintext highlighter-rouge">Plugins</code></li>
+  <li>Search for <strong>SeleniumIQ</strong></li>
+  <li>Click <code class="language-plaintext highlighter-rouge">Install</code> and restart the IDE</li>
+</ol>
+
+<h3 id="offline-installation">Offline Installation</h3>
+
+<p>If your machine has limited connectivity, download the latest <code class="language-plaintext highlighter-rouge">.zip</code> from the <a href="https://github.com/JirakJ/selenium-iq-plugin/releases">releases page</a> and install via <code class="language-plaintext highlighter-rouge">Settings → Plugins → ⚙ → Install Plugin from Disk</code>.</p>
+
+<h2 id="2-prepare-your-project">2. Prepare Your Project</h2>
+
+<ul>
+  <li>Ensure WebDriver binaries are resolvable via PATH or Maven/Gradle dependencies</li>
+  <li>Verify your test framework (JUnit/TestNG) runs locally before adding AI steps</li>
+  <li>Enable “Delegate build/run actions to Gradle” for more accurate instrumentation</li>
+</ul>
+
+<h2 id="3-generate-locators-with-ai">3. Generate Locators with AI</h2>
+
+<ol>
+  <li>Open a test class and place the caret inside a failing locator</li>
+  <li>Right-click → <code class="language-plaintext highlighter-rouge">SeleniumIQ → Generate AI Locator</code></li>
+  <li>Provide DOM context if prompted and accept the recommended selector</li>
+</ol>
+
+<blockquote>
+  <p><strong>Tip:</strong> Keep the SeleniumIQ tool window open to compare proposed selectors side-by-side.</p>
+</blockquote>
+
+<h2 id="4-self-healing-during-test-runs">4. Self-Healing During Test Runs</h2>
+
+<ul>
+  <li>Run tests with <code class="language-plaintext highlighter-rouge">SeleniumIQ Self-Heal</code> configuration (auto-created after install)</li>
+  <li>When a locator fails, SeleniumIQ pauses execution, offers candidate replacements, and patches the code upon confirmation</li>
+  <li>All changes are tracked as IDE-local patches so you can review before committing</li>
+</ul>
+
+<h2 id="5-cicd-integration">5. CI/CD Integration</h2>
+
+<ul>
+  <li>Export CI snippets from the SeleniumIQ panel (<code class="language-plaintext highlighter-rouge">⋮ → Export Pipeline</code>)</li>
+  <li>Commit generated YAML to your pipeline (GitHub Actions, Jenkins, GitLab CI)</li>
+  <li>Use the <code class="language-plaintext highlighter-rouge">SELENIUMIQ_API_KEY</code> secret to authenticate premium self-healing in CI</li>
+</ul>
+
+<h2 id="troubleshooting-checklist">Troubleshooting Checklist</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Symptom</th>
+      <th>Recommendation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Plugin not visible</td>
+      <td>Confirm IDE version ≥ 2021.3 and restart after install</td>
+    </tr>
+    <tr>
+      <td>AI locator fails</td>
+      <td>Provide more DOM context; use the “Capture DOM” button before requesting</td>
+    </tr>
+    <tr>
+      <td>Headless run hangs</td>
+      <td>Update to v1.1.2, which skips the welcome dialog automatically</td>
+    </tr>
+    <tr>
+      <td>Self-heal not triggered in CI</td>
+      <td>Ensure the <code class="language-plaintext highlighter-rouge">--enable-self-heal</code> flag is present in the runner command</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<ul>
+  <li>Explore the <a href="/features/">Feature Guide</a> to discover analytics dashboards, flakiness scoring, and page-object generation</li>
+  <li>Compare plans in <a href="/premium-tiers/">Premium Tiers</a> to unlock advanced coordination features for your team</li>
+  <li>File a <a href="/issue-tracker/">Docs Update</a> if any step above needs clarification</li>
+</ul>
+
+  </main>
+  <footer>
+    <hr />
+    <p>Built by the SeleniumIQ team · <a href="https://github.com/JirakJ/selenium-iq-docs">Edit this page on GitHub</a></p>
+  </footer>
+</body>
+</html>

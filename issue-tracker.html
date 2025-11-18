@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Issue Tracker | SeleniumIQ Docs</title>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Issue Tracker | selenium-iq-docs</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Issue Tracker" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for jetbrains IDE plugin" />
+<meta property="og:description" content="Documentation for jetbrains IDE plugin" />
+<meta property="og:site_name" content="selenium-iq-docs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Issue Tracker" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Documentation for jetbrains IDE plugin","headline":"Issue Tracker","url":"/issue-tracker.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" integrity="sha512-8Qh5R+xVQxeqmoeZaZX6mE6xPD58Ll35H5TADaBrZEcD3xKhsR4HIX66vepQP9enZ5bY3bT5iAG2wE8xmPKX5Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; line-height: 1.6; }
+    header nav a { margin-right: 0.75rem; }
+    header nav a.active { font-weight: 600; }
+    pre { background: #f6f8fa; padding: 1rem; overflow-x: auto; }
+    .note { border-left: 4px solid #33c3f0; padding: 0.5rem 1rem; background: #f0faff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/">SeleniumIQ Docs</a></h1>
+    <p>AI-powered Selenium testing companion for IntelliJ IDEA.</p>
+    <nav>
+      
+      
+      <a href="https://github.com/JirakJ/selenium-iq-plugin" target="_blank">Plugin Repo ↗</a>
+    </nav>
+    <hr />
+  </header>
+  <main>
+    <h1 id="issue-tracking-workflow">Issue Tracking Workflow</h1>
+
+<p>SeleniumIQ uses two repositories side-by-side: <code class="language-plaintext highlighter-rouge">selenium-iq-plugin</code> for code and <code class="language-plaintext highlighter-rouge">selenium-iq-docs</code> for documentation. This page describes how we categorize, template, and automate issues.</p>
+
+<h2 id="label-taxonomy">Label Taxonomy</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Label</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bug</code></td>
+      <td>Regression or incorrect behavior in plugin/docs</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">feature</code></td>
+      <td>Net-new capability or enhancement request</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">docs</code></td>
+      <td>Documentation-specific content updates</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ux</code></td>
+      <td>Workflow or usability pain points</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">needs-info</code></td>
+      <td>Waiting for reporter to provide logs or repro details</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">premium</code></td>
+      <td>Requests tied to paid tiers</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="issue-templates">Issue Templates</h2>
+
+<p>We standardize triage via <code class="language-plaintext highlighter-rouge">.github/ISSUE_TEMPLATE</code>.</p>
+
+<h3 id="bug-report">Bug Report</h3>
+<ul>
+  <li>Observed vs expected behavior</li>
+  <li>Environment (IDE, OS, plugin version)</li>
+  <li>Reproduction steps and logs or screenshots</li>
+</ul>
+
+<h3 id="feature-request">Feature Request</h3>
+<ul>
+  <li>Problem statement explaining the need</li>
+  <li>Proposed solution or UX flow</li>
+  <li>Acceptance criteria and dependencies</li>
+</ul>
+
+<h3 id="docs-update">Docs Update</h3>
+<ul>
+  <li>Link to the affected page</li>
+  <li>Summary of missing/incorrect content</li>
+  <li>Suggested wording or resources</li>
+</ul>
+
+<h2 id="project-board-flow">Project Board Flow</h2>
+
+<ol>
+  <li><strong>Backlog</strong> – new items awaiting grooming</li>
+  <li><strong>In Progress</strong> – active sprint work (link related PRs)</li>
+  <li><strong>Docs Ready</strong> – engineering change merged; documentation pending</li>
+  <li><strong>Done</strong> – deployed to Marketplace + docs published</li>
+</ol>
+
+<h2 id="cross-repo-best-practices">Cross-Repo Best Practices</h2>
+
+<ul>
+  <li>Reference plugin issues from docs using <code class="language-plaintext highlighter-rouge">JirakJ/selenium-iq-plugin#123</code></li>
+  <li>Mention docs PRs in plugin release notes when they affect user-facing behavior</li>
+  <li>Keep changelog entries mirrored across both repos each release</li>
+</ul>
+
+<h2 id="automation">Automation</h2>
+
+<ul>
+  <li>GitHub Actions workflow adds <code class="language-plaintext highlighter-rouge">needs-info</code> if templates are incomplete</li>
+  <li>Label sync bot mirrors labels between repos for shared issues</li>
+  <li>Deploy workflow comments on linked plugin issues after docs publish</li>
+</ul>
+
+<p>Need assistance? Contact <code class="language-plaintext highlighter-rouge">docs@jakubjirak.com</code> or drop by the <code class="language-plaintext highlighter-rouge">#JirakJ-support</code> Slack channel (Team plan and above).</p>
+
+  </main>
+  <footer>
+    <hr />
+    <p>Built by the SeleniumIQ team · <a href="https://github.com/JirakJ/selenium-iq-docs">Edit this page on GitHub</a></p>
+  </footer>
+</body>
+</html>
