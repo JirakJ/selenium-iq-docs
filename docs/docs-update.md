@@ -16,3 +16,7 @@ Use the **Docs Update** issue type when you spot missing or incorrect content. P
 
 File a new issue via [GitHub](https://github.com/JirakJ/selenium-iq-docs/issues/new/choose) and select `Docs Update`.
 
+## Recent Fixes
+
+- 2025-11-18: Added `docs/assets/css/style.scss` so GitHub Pages can compile styles without failing in `Jekyll::Converters::Scss`.
+- 2025-11-18: Noted that GitHub Pages now requires the `faraday-retry` gem, which is included automatically when using the `github-pages` bundle locally.
